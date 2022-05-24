@@ -2,6 +2,7 @@ const Manager = require("./lib/Manager.js");
 const Engineer = require("./lib/Engineer.js");
 const Intern = require("./lib/Intern.js");
 const inquirer = require("inquirer");
+const generator = require("./dist/generator.js");
 const fs = require("fs");
 const teamArray = [];
 
@@ -49,7 +50,7 @@ function teamGenerator() {
     });
 }
 
-function generateManager() {
+const generateManager = () => {
   inquirer
     .prompt([
       {
@@ -84,9 +85,9 @@ function generateManager() {
       console.log("Team Array ------- ", teamArray);
       teamGenerator();
     });
-}
+};
 
-function generateEngineer() {
+const generateEngineer = () => {
   inquirer
     .prompt([
       {
@@ -121,9 +122,9 @@ function generateEngineer() {
       console.log("Team Array ------- ", teamArray);
       teamGenerator();
     });
-}
+};
 
-function generateIntern() {
+const generateIntern = () => {
   inquirer
     .prompt([
       {
@@ -158,6 +159,10 @@ function generateIntern() {
       console.log("Team Array ------- ", teamArray);
       teamGenerator();
     });
+};
+
+function buildTeam() {
+  generator(teamArray);
 }
 
 function init() {
