@@ -1,3 +1,6 @@
+const manager = require("./lib/Manager");
+const engineer = require("./lib/Engineer");
+const intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const teamArray = [];
@@ -90,18 +93,30 @@ const internQuestions = [
   },
 ];
 
-inquirer.prompt(starterQuestions).then = (answer) => {
+const generateManager = () => {
+  inquirer.prompt(managerQuestions);
+};
+
+const generateEngineer = () => {
+  inquirer.prompt(engineerQuestions);
+};
+
+const generateIntern = () => {
+  inquirer.prompt(internQuestions);
+};
+
+inquirer.prompt(starterQuestions).then((answer) => {
   switch (answer.employeeType) {
     case "Manager":
-      inquirer.prompt(managerQuestions);
+      generateManager();
       break;
     case "Engineer":
-      inquirer.prompt(engineerQuestions);
+      generateEngineer();
       break;
     case "Intern":
-      inquirer.prompt(internQuestions);
+      generateIntern();
       break;
     case "I don't want to add any more employees":
       console.log("Your team is ready!");
   }
-};
+});
