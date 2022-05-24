@@ -5,6 +5,7 @@ const inquirer = require("inquirer");
 const generator = require("./dist/generator.js");
 const fs = require("fs");
 const teamArray = [];
+const companyName = [];
 
 function starterQuestion() {
   inquirer
@@ -16,6 +17,8 @@ function starterQuestion() {
       },
     ])
     .then((responses) => {
+      companyName.push(responses.companyName)
+      console.log("Company Name: ", companyName);
       teamGenerator();
     });
 }
@@ -45,6 +48,9 @@ function teamGenerator() {
           break;
         case "Intern":
           generateIntern();
+          break;
+        case "I don't want to add any more employees":
+          buildTeam();
           break;
       }
     });
@@ -162,7 +168,7 @@ const generateIntern = () => {
 };
 
 function buildTeam() {
-  generator(teamArray);
+  generator(companyName, teamArray);
 }
 
 function init() {
