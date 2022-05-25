@@ -3,102 +3,12 @@ const Engineer = require("../lib/Engineer.js");
 const Intern = require("../lib/Intern.js");
 const fs = require("fs");
 
-// const generateEmployeeEl = (teamArray) => {
-//   for (let j = 0; j < teamArray.length; j++){
-//     generateEmployee();
-//   }
-// }
-
-// const generateManagerEl = (teamArray) => {
-//   for (let i = 0; i < teamArray.length; i++) {
-//     if (teamArray[i].constructor.name === "Manager") {
-//       return `
-//       <div class="col-sm-4">
-//             <div class="card">
-//               <div class="card-body">
-//                 <h5 class="card-title">${teamArray[i].name}</h5>
-//                 <h6>Manager</h6>
-//                 <h7 class="card-text">
-//                   Id: ${teamArray[i].id}
-//                   <br />
-//                   Email: ${teamArray[i].email}
-//                   <br />Office Number: ${teamArray[i].officeNumber}
-//                 </h7>
-//               </div>
-//             </div>
-//       </div>
-//       `;
-//     }
-//   }
-// }
-
-// const generateEngineerEl = (teamArray) => {
-//   for (let i = 0; i < teamArray.length; i++) {
-//     if (teamArray[i].constructor.name === "Engineer") {
-//       return `
-//       <div class="col-sm-4">
-//             <div class="card">
-//               <div class="card-body">
-//                 <h5 class="card-title">${teamArray[i].name}</h5>
-//                 <h6>Engineer</h6>
-//                 <h7 class="card-text">
-//                   Id: ${teamArray[i].id}
-//                   <br />
-//                   Email: ${teamArray[i].email}
-//                   <br />Github: ${teamArray[i].github}
-//                 </h7>
-//               </div>
-//             </div>
-//       </div>
-//       `;
-//     }
-//   }
-// }
-
-// const generateInternEl = (teamArray) => {
-//   for (let i = 0; i < teamArray.length; i++) {
-//     if (teamArray[i].constructor.name === "Intern") {
-//       return `
-//       <div class="col-sm-4">
-//             <div class="card">
-//               <div class="card-body">
-//                 <h5 class="card-title">${teamArray[i].name}</h5>
-//                 <h6>Intern</h6>
-//                 <h7 class="card-text">
-//                   Id: ${teamArray[i].id}
-//                   <br />
-//                   Email: ${teamArray[i].email}
-//                   <br />School: ${teamArray[i].school}
-//                 </h7>
-//               </div>
-//             </div>
-//       </div>
-//       `;
-//     }
-//   }
-// }
-
-// const generateEmployeeEl = (teamArray) => {
-//   for (let i = 0; i < teamArray.length; i++) {
-//     switch (teamArray[i].constructor.name) {
-//       case "Manager":
-//         console.log('You created a manager!');
-//         return generateManagerEl(teamArray);
-//       case "Engineer":
-//         console.log('You created an engineer!');
-//         return generateEngineerEl(teamArray);
-//       case "Intern":
-//         console.log('You created an intern!');
-//        return generateInternEl(teamArray);
-//     }
-//   }
-// }
-
 const generateEmployee = (teamArray) => {
+  var generateEmployeeEl = "";
   for (let i = 0; i < teamArray.length; i++) {
     if (teamArray[i].constructor.name === "Manager") {
-      console.log("You created a Manager!");
-      return `
+      console.log("You created an Manager!");
+      generateEmployeeEl += `
       <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
@@ -114,10 +24,11 @@ const generateEmployee = (teamArray) => {
             </div>
       </div>
       `;
+      console.log(generateEmployeeEl);
     }
     if (teamArray[i].constructor.name === "Engineer") {
       console.log("You created a Engineer!");
-      return `
+      generateEmployeeEl += `
       <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
@@ -136,7 +47,7 @@ const generateEmployee = (teamArray) => {
     }
     if (teamArray[i].constructor.name === "Intern") {
       console.log("You created an Intern!");
-      return `
+      generateEmployeeEl += `
       <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
@@ -153,6 +64,8 @@ const generateEmployee = (teamArray) => {
       `;
     }
   }
+
+  return generateEmployeeEl;
 };
 
 const generateTeam = (teamArray, companyName) => {
