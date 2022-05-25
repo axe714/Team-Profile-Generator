@@ -14,17 +14,16 @@ const generateEmployee = (teamArray) => {
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Manager</h6>
+                <img src="../assets/images/manager.png" height="25" widt="25" alt="manager icon">
                 <h7 class="card-text">
-                  Id: ${teamArray[i].id}
-                  <br />
-                  Email: ${teamArray[i].email}
+                  <br  />Id: ${teamArray[i].id}
+                  <br />Email: ${teamArray[i].email}
                   <br />Office Number: ${teamArray[i].officeNumber}
                 </h7>
               </div>
             </div>
       </div>
       `;
-      console.log(generateEmployeeEl);
     }
     if (teamArray[i].constructor.name === "Engineer") {
       console.log("You created a Engineer!");
@@ -34,10 +33,10 @@ const generateEmployee = (teamArray) => {
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Engineer</h6>
+                <img src="../assets/images/engineer.png" height="25" widt="25" alt="engineer icon">
                 <h7 class="card-text">
-                  Id: ${teamArray[i].id}
-                  <br />
-                  Email: ${teamArray[i].email}
+                  <br  />Id: ${teamArray[i].id}
+                  <br />Email: ${teamArray[i].email}
                   <br />Github: ${teamArray[i].github}
                 </h7>
               </div>
@@ -53,8 +52,9 @@ const generateEmployee = (teamArray) => {
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Intern</h6>
+                <img src="../assets/images/student.png" height="25" widt="25" alt="intern icon">
                 <h7 class="card-text">
-                  Id: ${teamArray[i].id}
+                  <br  />Id: ${teamArray[i].id}
                   <br />Email: ${teamArray[i].email}
                   <br />School: ${teamArray[i].school}
                 </h7>
@@ -64,7 +64,7 @@ const generateEmployee = (teamArray) => {
       `;
     }
   }
-
+  
   return generateEmployeeEl;
 };
 
@@ -93,12 +93,10 @@ const generateTeam = (teamArray, companyName) => {
         <div class="card-footer text-muted"></div>
       </div>
   
-      <div class="container-fluid  d-flex justify-content-center">
+      <div class="container-fluid d-flex justify-content-center">
         <div class="row">
           <div class="card-group">
-          
             ${generateEmployee(teamArray)}
-
           </div>
         </div>
       </div>
