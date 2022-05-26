@@ -9,7 +9,7 @@ const generateManagerEl = (teamArray) => {
     if (teamArray[i].constructor.name === "Manager") {
       generateManagerString += `
       <div class="col-sm-4">
-            <div class="card">
+            <div style="background-color:#DDE8B9; margin: 15px" class="card">
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Manager</h6>
@@ -34,7 +34,7 @@ const generateEngineerEl = (teamArray) => {
     if (teamArray[i].constructor.name === "Engineer") {
       generateEngineerString += `
       <div class="col-sm-4">
-            <div class="card">
+            <div style="background-color:#E8D2AE; margin: 15px" class="card">
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Engineer</h6>
@@ -59,7 +59,7 @@ const generateInternEl = (teamArray) => {
     if (teamArray[i].constructor.name === "Intern") {
       generateInternString += `
       <div class="col-sm-4">
-            <div class="card">
+            <div style="background-color:#FCC8B2; margin: 15px" class="card">
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Intern</h6>
@@ -92,16 +92,19 @@ const generateTeam = (teamArray, companyName) => {
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
         crossorigin="anonymous"
       />
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Gafata&display=swap');
+      </style>
     </head>
     <body>
-      <div class="card text-center">
-        <h3 class="card-header">${companyName}</h3>
+      <div style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" class="card text-center">
+        <h3 style="font-family: 'Gafata', sans-serif; font-weight: 1000; font-size: 35px; padding: 20px 0 20px 0" class="card-header">${companyName}</h3>
         <div class="card-body">
           <h4 class="card-title">Meet our team</h4>
         </div>
         <div class="card-footer text-muted"></div>
       </div>
-      <div class="container-fluid d-flex justify-content-center">
+      <div style="margin: 30px 0 30px 0" class="container-fluid d-flex justify-content-center">
         <div class="row">
           <div class="card-group">
             ${generateManagerEl(teamArray)}

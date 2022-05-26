@@ -7,7 +7,7 @@ const fs = require("fs");
 const teamArray = [];
 const companyName = [];
 
-function starterQuestion() {
+const starterQuestion = () => {
   inquirer
     .prompt([
       {
@@ -24,7 +24,7 @@ function starterQuestion() {
     });
 }
 
-function teamGenerator() {
+const teamGenerator = () => {
   inquirer
     .prompt([
       {
