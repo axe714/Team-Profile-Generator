@@ -16,7 +16,7 @@ const generateManagerEl = (teamArray) => {
                 <img style="margin:7.5px 0 7.5px 0" src="../assets/images/manager.png" height="25" alt="manager icon">
                 <h7 class="card-text">
                   <br  />Id: ${teamArray[i].id}
-                  <br />Email: ${teamArray[i].email}
+                  <br />Email: <a href="mailto:${teamArray[i].email}"> ${teamArray[i].email}</a>
                   <br />Office Number: ${teamArray[i].officeNumber}
                 </h7>
               </div>
@@ -41,7 +41,7 @@ const generateEngineerEl = (teamArray) => {
                 <img style="margin:7.5px 0 7.5px 0" src="../assets/images/engineer.png" height="25" alt="engineer icon">
                 <h7 class="card-text">
                   <br  />Id: ${teamArray[i].id}
-                  <br />Email: ${teamArray[i].email}
+                  <br />Email: <a href="mailto:${teamArray[i].email}"> ${teamArray[i].email}</a>
                   <br />Github: ${teamArray[i].github}
                 </h7>
               </div>
@@ -66,7 +66,7 @@ const generateInternEl = (teamArray) => {
                 <img style="margin:7.5px 0 7.5px 0" src="../assets/images/student.png" height="25" alt="intern icon">
                 <h7 class="card-text">
                   <br  />Id: ${teamArray[i].id}
-                  <br />Email: ${teamArray[i].email}
+                  <br />Email: <a href="mailto:${teamArray[i].email}"> ${teamArray[i].email}</a>
                   <br />School: ${teamArray[i].school}
                 </h7>
               </div>
