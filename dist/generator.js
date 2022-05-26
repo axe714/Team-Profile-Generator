@@ -13,7 +13,7 @@ const generateManagerEl = (teamArray) => {
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Manager</h6>
-                <img src="../assets/images/manager.png" height="25" widt="25" alt="manager icon">
+                <img style="margin:7.5px 0 7.5px 0" src="../assets/images/manager.png" height="25" alt="manager icon">
                 <h7 class="card-text">
                   <br  />Id: ${teamArray[i].id}
                   <br />Email: ${teamArray[i].email}
@@ -38,7 +38,7 @@ const generateEngineerEl = (teamArray) => {
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Engineer</h6>
-                <img src="../assets/images/engineer.png" height="25" widt="25" alt="engineer icon">
+                <img style="margin:7.5px 0 7.5px 0" src="../assets/images/engineer.png" height="25" alt="engineer icon">
                 <h7 class="card-text">
                   <br  />Id: ${teamArray[i].id}
                   <br />Email: ${teamArray[i].email}
@@ -63,7 +63,7 @@ const generateInternEl = (teamArray) => {
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Intern</h6>
-                <img src="../assets/images/student.png" height="25" widt="25" alt="intern icon">
+                <img style="margin:7.5px 0 7.5px 0" src="../assets/images/student.png" height="25" alt="intern icon">
                 <h7 class="card-text">
                   <br  />Id: ${teamArray[i].id}
                   <br />Email: ${teamArray[i].email}
