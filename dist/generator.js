@@ -97,7 +97,8 @@ const generateTeam = (teamArray, companyName) => {
       </style>
     </head>
     <body>
-      <div style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" class="card text-center">
+      <div style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; background: rgb(221,232,185);
+      background: linear-gradient(90deg, rgba(221,232,185,1) 15%, rgba(232,210,174,1) 40%, rgba(252,200,178,1) 74%);" class="card text-center">
         <h3 style="font-family: 'Gafata', sans-serif; font-weight: 1000; font-size: 35px; padding: 20px 0 20px 0" class="card-header">${companyName}</h3>
         <div class="card-body">
           <h4 class="card-title">Meet our team</h4>
