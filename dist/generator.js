@@ -11,7 +11,7 @@ const generateManagerEl = (teamArray) => {
       <div class="col-sm-4">
             <div style="background-color:#DDE8B9; margin: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;" class="card">
               <div class="card-body">
-                <h5 class="card-title">${teamArray[i].name}</h5>
+                <h5 style="font-family: 'Gafata', sans-serif; font-weight: 600; font-size: 25px" class="card-title">${teamArray[i].name}</h5>
                 <h6>Manager</h6>
                 <img style="margin:7.5px 0 7.5px 0" src="../assets/images/manager.png" height="25" alt="manager icon">
                 <h7 class="card-text">
@@ -36,7 +36,7 @@ const generateEngineerEl = (teamArray) => {
       <div class="col-sm-4">
             <div style="background-color:#E8D2AE; margin: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;" class="card">
               <div class="card-body">
-                <h5 class="card-title">${teamArray[i].name}</h5>
+                <h5 style="font-family: 'Gafata', sans-serif; font-weight: 600; font-size: 25px" class="card-title">${teamArray[i].name}</h5>
                 <h6>Engineer</h6>
                 <img style="margin:7.5px 0 7.5px 0" src="../assets/images/engineer.png" height="25" alt="engineer icon">
                 <h7 class="card-text">
@@ -61,7 +61,7 @@ const generateInternEl = (teamArray) => {
       <div class="col-sm-4">
             <div style="background-color:#FCC8B2; margin: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;" class="card">
               <div class="card-body">
-                <h5 class="card-title">${teamArray[i].name}</h5>
+                <h5 style="font-family: 'Gafata', sans-serif; font-weight: 600; font-size: 25px" class="card-title">${teamArray[i].name}</h5>
                 <h6>Intern</h6>
                 <img style="margin:7.5px 0 7.5px 0" src="../assets/images/student.png" height="25" alt="intern icon">
                 <h7 class="card-text">
@@ -105,7 +105,7 @@ const generateTeam = (teamArray, companyName) => {
         </div>
         <div class="card-footer text-muted"></div>
       </div>
-      <div style="margin: 30px 0 30px 0" class="container-fluid d-flex justify-content-center">
+      <div style="padding: 50px 0 50px 0; background-color: #dfdfdf" class="container-fluid d-flex justify-content-center">
         <div class="row">
           <div class="card-group">
             ${generateManagerEl(teamArray)}
