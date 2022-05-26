@@ -9,7 +9,7 @@ const generateManagerEl = (teamArray) => {
     if (teamArray[i].constructor.name === "Manager") {
       generateManagerString += `
       <div class="col-sm-4">
-            <div style="background-color:#DDE8B9; margin: 15px" class="card">
+            <div style="background-color:#DDE8B9; margin: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;" class="card">
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Manager</h6>
@@ -34,7 +34,7 @@ const generateEngineerEl = (teamArray) => {
     if (teamArray[i].constructor.name === "Engineer") {
       generateEngineerString += `
       <div class="col-sm-4">
-            <div style="background-color:#E8D2AE; margin: 15px" class="card">
+            <div style="background-color:#E8D2AE; margin: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;" class="card">
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Engineer</h6>
@@ -59,7 +59,7 @@ const generateInternEl = (teamArray) => {
     if (teamArray[i].constructor.name === "Intern") {
       generateInternString += `
       <div class="col-sm-4">
-            <div style="background-color:#FCC8B2; margin: 15px" class="card">
+            <div style="background-color:#FCC8B2; margin: 15px; box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;" class="card">
               <div class="card-body">
                 <h5 class="card-title">${teamArray[i].name}</h5>
                 <h6>Intern</h6>
