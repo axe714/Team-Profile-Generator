@@ -3,12 +3,11 @@ const Engineer = require("../lib/Engineer.js");
 const Intern = require("../lib/Intern.js");
 const fs = require("fs");
 
-const generateEmployee = (teamArray) => {
-  var generateEmployeeEl = "";
+const generateManagerEl = (teamArray) => {
+  let generateManagerString = "";
   for (let i = 0; i < teamArray.length; i++) {
     if (teamArray[i].constructor.name === "Manager") {
-      console.log("You created an Manager!");
-      generateEmployeeEl += `
+      generateManagerString += `
       <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
@@ -25,9 +24,15 @@ const generateEmployee = (teamArray) => {
       </div>
       `;
     }
+  }
+  return generateManagerString;
+};
+
+const generateEngineerEl = (teamArray) => {
+  let generateEngineerString = "";
+  for (let i = 0; i < teamArray.length; i++) {
     if (teamArray[i].constructor.name === "Engineer") {
-      console.log("You created a Engineer!");
-      generateEmployeeEl += `
+      generateEngineerString += `
       <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
@@ -41,12 +46,18 @@ const generateEmployee = (teamArray) => {
                 </h7>
               </div>
             </div>
-          </div>
+      </div>
       `;
     }
+  }
+  return generateEngineerString;
+};
+
+const generateInternEl = (teamArray) => {
+  let generateInternString = "";
+  for (let i = 0; i < teamArray.length; i++) {
     if (teamArray[i].constructor.name === "Intern") {
-      console.log("You created an Intern!");
-      generateEmployeeEl += `
+      generateInternString += `
       <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
@@ -60,18 +71,16 @@ const generateEmployee = (teamArray) => {
                 </h7>
               </div>
             </div>
-          </div>
+      </div>
       `;
     }
   }
-  
-  return generateEmployeeEl;
+  return generateInternString;
 };
 
 const generateTeam = (teamArray, companyName) => {
-  const createHTML = `
-  <!DOCTYPE html>
-  <html lang="en">
+  const createHTML = `<!DOCTYPE html>
+    <html lang="en">
     <head>
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -92,23 +101,23 @@ const generateTeam = (teamArray, companyName) => {
         </div>
         <div class="card-footer text-muted"></div>
       </div>
-  
       <div class="container-fluid d-flex justify-content-center">
         <div class="row">
           <div class="card-group">
-            ${generateEmployee(teamArray)}
+            ${generateManagerEl(teamArray)}
+            ${generateEngineerEl(teamArray)}
+            ${generateInternEl(teamArray)}
           </div>
         </div>
       </div>
     </body>
-  </html>
-    `;
+  </html>`;
 
   fs.writeFile("./dist/index.html", createHTML, (err) => {
     if (err) {
       return console.log(err);
     }
-    console.log("WOOHOO YOU DID IT!");
+    console.log("Team successfully generated! Check the dist folder for your index.html file.");
   });
 };
 
