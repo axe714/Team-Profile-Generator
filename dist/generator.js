@@ -42,7 +42,7 @@ const generateEngineerEl = (teamArray) => {
                 <h7 class="card-text">
                   <br  />Id: ${teamArray[i].id}
                   <br />Email: <a href="mailto:${teamArray[i].email}"> ${teamArray[i].email}</a>
-                  <br />Github: ${teamArray[i].github}
+                  <br />Github: <a href="https://www.github.com/${teamArray[i].github}"> ${teamArray[i].github}</a>
                 </h7>
               </div>
             </div>
