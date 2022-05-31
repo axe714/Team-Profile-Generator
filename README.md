@@ -24,7 +24,9 @@
 - Run ``` npm i ``` to install the required dependencies, then run ``` node index.js ``` in the terminal to launch the application.
 
 ## Usage
-- This program generates an HTML file of your software engineering team, complete with some basic CSS styling. There are 3 employee types to pick from, and the following information will be present in each employee card: 
+- This program generates an HTML file of your software engineering team, complete with some basic CSS styling. 
+  - <strong>The generated HTML file can be found inside the dist folder</strong>. 
+- There are 3 employee types to pick from, and the following information will be present in each employee card: 
 ``` 
 1. Manager
     - Name
