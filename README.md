@@ -20,7 +20,7 @@
     * [Email](#email)
 
 ## Installation
-- [Youtube Walkthrough - INSERT LINK!](#)
+- For a video guide, please refer to this [Youtube Walkthrough.](https://www.youtube.com/watch?v=Uk2Ws17BilI)
 - Run ``` npm i ``` to install the required dependencies, then run ``` node index.js ``` in the terminal to launch the application.
 
 ## Usage
